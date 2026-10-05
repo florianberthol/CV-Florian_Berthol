@@ -207,6 +207,7 @@
             color: #475569;
             display: inline-block;
             margin-top: 2px;
+            width: 100%;
         }
 
         .tech-env strong {
@@ -424,14 +425,14 @@
 
         <div class="project-card">
             <div class="project-title">
-                <span>Site communautaire en production (17 000+ membres)</span>
+                <span>Site communautaire en production</span>
                 <a href="https://blague-drole.net/" target="_blank" class="project-url">blague-drole.net ↗</a>
             </div>
-            <div class="exp-desc" style="margin-top: 4px;">Conception, développement et administration globale du site en production depuis 2011 :</div>
+            <div class="exp-desc" style="margin-top: 4px;">Conception, développement et administration du site en production depuis 2011 :</div>
             <ul class="bullets" style="margin-top: 6px;">
                 <li><strong>Modernisation & Performance :</strong> Réécriture complète de l'application historique en PHP 8.5 / Symfony 7.4, avec reprise des fonctionnalités existantes et optimisation des temps de réponse backend.</li>
                 <li><strong>Cache & Recherche :</strong> Mise en place de Redis pour le cache des données et des sessions, ainsi que développement d'un moteur de recherche basé sur RedisSearch.</li>
-                <li><strong>Traitement asynchrone :</strong> Implémentation de Symfony Messenger avec transport Redis pour le traitement asynchrone des tâches en arrière-plan.</li>
+                <li><strong>Traitement asynchrone :</strong> Implémentation de Symfony Messenger avec transport Redis pour le traitement asynchrone des tâches en arrière-plan (invalidation des caches, generations des vignettes).</li>
                 <li><strong>Frontend :</strong> Migration des parties dynamiques de l'interface de jQuery vers Vue.js 3 et intégration de Symfony UX.</li>
                 <li><strong>DevOps & Infrastructure :</strong> Conteneurisation de l'application avec Docker, administration et déploiement sur un VPS Linux (Debian) avec FrankenPHP.</li>
                 <li><strong>Qualité & Tests :</strong> Écriture de tests unitaires et fonctionnels avec PHPUnit afin de sécuriser les évolutions et limiter les régressions.</li>
