@@ -15,7 +15,7 @@
 
         @page {
             size: A4;
-            margin: 0;
+            margin: 2mm 0;
         }
 
         body {
@@ -24,6 +24,10 @@
             background-color: #f8fafc;
             line-height: 1.4;
             font-size: 13px;
+        }
+
+        .text-light {
+            color: #cbd5e1 !important;
         }
 
         .cv-container {
@@ -274,17 +278,18 @@
 
             <div class="skill-group">
                 <div class="skill-cat">Langages</div>
-                <div class="skill-list">PHP 5 à 8.4, JavaScript, Shell (bash, zsh, PowerShell), Python, API REST</div>
+                <div class="skill-list">PHP 5 à 8.5, JavaScript, Shell (bash, zsh, PowerShell), Python, SQL</div>
             </div>
 
             <div class="skill-group">
                 <div class="skill-cat">Frameworks</div>
-                <div class="skill-list">Symfony 2 à 7.4, Zend 1 & 2, FuelPHP, AngularJS, Vue.js, React, jQuery</div>
+                <div class="skill-list">Symfony 2 à 7.4, AngularJS, Vue.js</div>
+                <div class="skill-list">jQuery, Zend 1 et 2, FuelPHP,</div>
             </div>
 
             <div class="skill-group">
-                <div class="skill-cat">Testing & Qualité</div>
-                <div class="skill-list">PHPUnit, Behat</div>
+                <div class="skill-cat">Testing et Qualité</div>
+                <div class="skill-list">PHPUnit, PHPStan</div>
             </div>
 
             <div class="skill-group">
@@ -293,13 +298,18 @@
             </div>
 
             <div class="skill-group">
-                <div class="skill-cat">Servers & Infra</div>
+                <div class="skill-cat">Servers et Infra</div>
                 <div class="skill-list">Nginx, Apache, FrankenPHP, Docker</div>
             </div>
 
             <div class="skill-group">
-                <div class="skill-cat">Outils & DevOps</div>
-                <div class="skill-list">Git, SVN, Jira, Redmine, CI/CD, Copilot, Gemini</div>
+                <div class="skill-cat">Outils</div>
+                <div class="skill-list">Git, SVN, Jira, Redmine, Copilot, Gemini</div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-cat">Méthodes et Concepts</div>
+                <div class="skill-list">API REST, tests automatisés, Agile, CI/CD</div>
             </div>
         </div>
 
@@ -316,17 +326,21 @@
         <div class="sidebar-section">
             <div class="sidebar-title">Langues</div>
             <div class="skill-list">
-                • <strong>Français :</strong> Maternelle<br>
-                • <strong>Anglais :</strong> Lu et écrit
+                <ul class="bullets">
+                    <li class="text-light"><strong>Français :</strong> Langue maternelle</li>
+                    <li class="text-light"><strong>Anglais :</strong> Lu et écrit</li>
+                </ul>
             </div>
         </div>
 
         <div class="sidebar-section">
             <div class="sidebar-title">Centres d'intérêt</div>
             <div class="skill-list">
-                • Bassiste dans un groupe de rock<br>
-                • Élève pilote ULM<br>
-                • Cuisine, Jeux vidéo
+                <ul class="bullets">
+                    <li class="text-light">Bassiste dans un groupe de rock</li>
+                    <li class="text-light">Élève pilote ULM</li>
+                    <li class="text-light">Cuisine, Jeux vidéo</li>
+                </ul>
             </div>
         </div>
     </aside>
@@ -334,7 +348,8 @@
     <!-- Main Content Right -->
     <main class="main-content">
         <div class="profile-summary">
-            Développeur senior PHP spécialisé Symfony depuis 10 ans. Fort d'une expérience variée allant du secteur bancaire à l'industrie, je conçois des solutions techniques robustes en étroite collaboration avec les équipes produit.
+            Je suis développeur PHP / Symfony depuis plus de 15 ans. Spécialisé dans la conception
+            d'API et d'applications web en collaboration avec les équipes métier, je suis à la recherche d'un poste en CDI.
         </div>
 
         <div class="section-header">Expériences Professionnelles</div>
@@ -347,12 +362,12 @@
             </div>
             <div class="exp-desc">Maintenance évolutive des API et applications critiques :</div>
             <ul class="bullets">
-                <li><strong>B19 & B20 :</strong> Maintenance évolutive des API REST et de l'espace client.</li>
+                <li><strong>B19 et B20 :</strong> Maintenance évolutive des API REST et de l'espace client.</li>
                 <li><strong>Boursoscaner :</strong> Développement du module d'upload de piéces justificatives de contrat.</li>
-                <li><strong>Parcours souscription :</strong> Tunnels de souscription multi-produits (chéquier, CB, prêt immo).</li>
+                <li><strong>Parcours souscription :</strong> Tunnels de souscription multi-produits (chéquier, CB, prêt immobilier, etc.).</li>
                 <li><strong>Jeu-concours JO :</strong> Conception de l'API REST interconnectée au CRM et du frontend avec l'équipe marketing.</li>
                 <li><strong>Génération de contrats RH :</strong> Recueil des besoins auprès des RH, choix des librairies PDF et développement d'un outil de génération automatique de contrats.</li>
-                <li><strong>Qualité & CI/CD :</strong> Rédaction des tests unitaires (PHPUnit) et respect des pipelines d'intégration continue pour sécuriser les livraisons en production.</li>
+                <li><strong>Qualité et CI/CD :</strong> Rédaction des tests unitaires (PHPUnit) et respect des pipelines d'intégration continue pour sécuriser les livraisons en production.</li>
             </ul>
             <div class="tech-env"><strong>Environnement technique :</strong> PHP 8.2, Symfony 5.4 et 6.4 en fonction du projet, API REST, PHPUnit, React, AngularJS, Docker, CI/CD</div>
         </div>
@@ -367,7 +382,7 @@
             <ul class="bullets">
                 <li><strong>Gestion du cycle de vie des API :</strong> Administration des API en production et maintenance des serveurs en collaboration directe avec l'équipe Sécurité.</li>
                 <li><strong>Portail développeur :</strong> Mise en place d'un portail sous Joomla pour la documentation des API.</li>
-                <li><strong>Outillage & Automatisation :</strong> Rédaction de scripts PowerShell de mise à jour automatique des API et de la documentation.</li>
+                <li><strong>Outillage et Automatisation :</strong> Rédaction de scripts PowerShell de mise à jour automatique des API et de la documentation.</li>
             </ul>
             <div class="tech-env"><strong>Environnement technique :</strong> Axway API Management, Axway API Portal, PowerShell, Joomla, API REST et SOAP</div>
         </div>
@@ -400,7 +415,7 @@
                 <li><strong>Développement web :</strong> Création et maintenance des plateformes institutionnelles et événementielles (economiedenergie.com, economiedenergie.fr, save-a-tonne.org, syndic.afcee.fr, devenir-ecoartisan.fr, blueplanetchallenge.com).</li>
                 <li><strong>Outillage interne :</strong> Réalisation d'outils métiers sur mesure selon les besoins des équipes opérationnelles.</li>
                 <li><strong>Flux de données :</strong> Traitement automatisé de flux XML et CSV.</li>
-                <li><strong>Qualité & Wiki :</strong> Implémentation d'un wiki interne et vérification automatique de tests de compétence.</li>
+                <li><strong>Qualité et Wiki :</strong> Implémentation d'un wiki interne et vérification automatique de tests de compétence.</li>
             </ul>
             <div class="tech-env"><strong>Environnement technique :</strong> PHP 5, MySQL, Drupal 7, Symfony 2, Apache</div>
         </div>
@@ -429,12 +444,12 @@
             </div>
             <div class="exp-desc" style="margin-top: 4px;">Conception, développement et administration du site en production depuis 2011 :</div>
             <ul class="bullets" style="margin-top: 6px;">
-                <li><strong>Modernisation & Performance :</strong> Réécriture complète de l'application historique en PHP 8.5 / Symfony 7.4, avec reprise des fonctionnalités existantes et optimisation des temps de réponse backend.</li>
-                <li><strong>Cache & Recherche :</strong> Mise en place de Redis pour le cache des données et des sessions, ainsi que développement d'un moteur de recherche basé sur RedisSearch.</li>
-                <li><strong>Traitement asynchrone :</strong> Implémentation de Symfony Messenger avec transport Redis pour le traitement asynchrone des tâches en arrière-plan (invalidation des caches, generations des vignettes).</li>
-                <li><strong>Frontend :</strong> Migration des parties dynamiques de l'interface de jQuery vers Vue.js 3 et intégration de Symfony UX.</li>
-                <li><strong>DevOps & Infrastructure :</strong> Conteneurisation de l'application avec Docker, administration et déploiement sur un VPS Linux (Debian) avec FrankenPHP.</li>
-                <li><strong>Qualité & Tests :</strong> Écriture de tests unitaires et fonctionnels avec PHPUnit afin de sécuriser les évolutions et limiter les régressions.</li>
+                <li><strong>Modernisation et Performance :</strong> Réécriture complète de l'application historique en PHP 8.5 / Symfony 7.4, avec reprise des fonctionnalités existantes et optimisation des temps de réponse backend.</li>
+                <li><strong>Cache et Recherche :</strong> Mise en place de Redis pour le cache des données et des sessions, ainsi que développement d'un moteur de recherche basé sur RedisSearch.</li>
+                <li><strong>Traitement asynchrone :</strong> Implémentation de Symfony Messenger avec transport Redis pour le traitement asynchrone des tâches en arrière-plan (invalidation des caches, generations des vignettes, etc.).</li>
+                <li><strong>Frontend :</strong> Migration des parties dynamiques de l'interface de jQuery vers Vue.js 3 à l'aide de Symfony UX.</li>
+                <li><strong>DevOps et Infrastructure :</strong> Conteneurisation de l'application avec Docker, administration et déploiement sur un VPS Linux (Debian) avec FrankenPHP.</li>
+                <li><strong>Qualité et Tests :</strong> Écriture de tests unitaires et fonctionnels avec PHPUnit afin de sécuriser les évolutions et limiter les régressions.</li>
                 <li><strong>SEO technique :</strong> Optimisation de la structure du code, implémentation de données structurées et optimisation des performances d'affichage.</li>
                 <li><strong>IA appliquée au dev :</strong> Utilisation de GitHub Copilot et Gemini pour l'analyse de code, la génération de tests et l'accélération du développement.</li>
             </ul>
