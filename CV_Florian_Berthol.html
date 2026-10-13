@@ -15,13 +15,14 @@
 
         @page {
             size: A4;
-            margin: 2mm 0;
+            /*margin: 2mm 0; utiliser cette ligne pour l'impression */
+            margin: 0;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             color: #1e293b;
-            background-color: #f8fafc;
+            background-color: #e2e8f0;
             line-height: 1.4;
             font-size: 13px;
         }
@@ -30,16 +31,18 @@
             color: #cbd5e1 !important;
         }
 
+        /* Rendu normal pour l'écran */
         .cv-container {
             width: 210mm;
-            min-height: 297mm;
+            min-height: 100vh;
             margin: 0 auto;
-            background: #ffffff;
+            /* Le fond global devient transparent pour ne rien bloquer */
+            background-color: transparent;
             display: grid;
             grid-template-columns: 260px 1fr;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
-        /* Sidebar Styles */
         .sidebar {
             background-color: #0f172a !important;
             color: #f1f5f9;
@@ -107,6 +110,8 @@
 
         /* Main Content Styles */
         .main-content {
+            /* Le fond blanc est appliqué uniquement sur la partie droite */
+            background-color: #ffffff !important;
             padding: 24px 24px;
         }
 
@@ -244,16 +249,35 @@
             font-weight: 500;
         }
 
+        /* Comportement spécifique et exclusif à l'impression PDF */
         @media print {
-            html, body {
-                width: 210mm;
-                height: 100%;
-                background: #ffffff;
+            body {
+                background-color: transparent !important;
             }
+
+            /* L'arme nucléaire est bien visible en arrière-plan */
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 260px;
+                background-color: #0f172a !important;
+                z-index: 0;
+            }
+
             .cv-container {
-                box-shadow: none;
                 width: 100%;
                 margin: 0;
+                box-shadow: none;
+                position: relative;
+                z-index: 1; /* Place le texte au-dessus du fond ::before */
+            }
+
+            /* La sidebar devient transparente pour révéler le fond bleu sombre */
+            .sidebar {
+                background-color: transparent !important;
             }
         }
     </style>
@@ -278,18 +302,18 @@
 
             <div class="skill-group">
                 <div class="skill-cat">Langages</div>
-                <div class="skill-list">PHP 5 à 8.5, JavaScript, Shell (bash, zsh, PowerShell), Python, SQL</div>
+                <div class="skill-list">PHP (8.x, 7.x, 5.x), JavaScript, Shell (bash, zsh, PowerShell), Python, SQL</div>
             </div>
 
             <div class="skill-group">
                 <div class="skill-cat">Frameworks</div>
-                <div class="skill-list">Symfony 2 à 7.4, AngularJS, Vue.js</div>
-                <div class="skill-list">jQuery, Zend 1 et 2, FuelPHP</div>
+                <div class="skill-list">Symfony (2 à 7), AngularJS, Vue.js, Bootstrap</div>
+                <div class="skill-list">jQuery, Zend Framework (1 et 2), FuelPHP</div>
             </div>
 
             <div class="skill-group">
                 <div class="skill-cat">Testing, Qualité et Conception</div>
-                <div class="skill-list">PHPUnit, PHPStan, Revues de code, SOLID, Design Patterns, POO</div>
+                <div class="skill-list">PHPUnit, PHPStan, CS Fixer, Revues de code, SOLID, Design Patterns, POO</div>
             </div>
 
             <div class="skill-group">
@@ -304,7 +328,7 @@
 
             <div class="skill-group">
                 <div class="skill-cat">Outils</div>
-                <div class="skill-list">Git (github, gitlab, bitbucket), SVN, Jira, Redmine, Copilot, Gemini, Claude, CS Fixer</div>
+                <div class="skill-list">Git (github, gitlab, bitbucket), SVN, Jira, Redmine, Copilot, Gemini, Claude</div>
             </div>
 
             <div class="skill-group">
