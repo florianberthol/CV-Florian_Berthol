@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florian Berthol CV - Senior PHP / Symfony Developer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        @page {
+            size: A4;
+            /*margin: 2mm 0; use this line for printing */
+            margin: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e293b;
+            background-color: #e2e8f0;
+            line-height: 1.4;
+            font-size: 13px;
+        }
+
+        .text-light {
+            color: #cbd5e1 !important;
+        }
+
+        /* Screen layout */
+        .cv-container {
+            width: 210mm;
+            min-height: 100vh;
+            margin: 0 auto;
+            background-color: transparent;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            background-color: #0f172a !important;
+            color: #f1f5f9;
+            padding: 24px 18px;
+        }
+
+        .sidebar h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .sidebar .subtitle {
+            font-size: 12px;
+            color: #38bdf8;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info {
+            margin-bottom: 22px;
+            font-size: 12px;
+        }
+
+        .contact-item {
+            margin-bottom: 6px;
+            word-break: break-all;
+        }
+
+        .sidebar-section {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94a3b8;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .skill-group {
+            margin-bottom: 10px;
+        }
+
+        .skill-cat {
+            font-weight: 600;
+            color: #38bdf8;
+            font-size: 11.5px;
+            margin-bottom: 2px;
+        }
+
+        .skill-list {
+            font-size: 11.5px;
+            color: #cbd5e1;
+            line-height: 1.3;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            background-color: #ffffff !important;
+            padding: 24px 24px;
+        }
+
+        .profile-summary {
+            background: #f0f9ff !important;
+            border-left: 4px solid #0284c7;
+            padding: 10px 14px;
+            border-radius: 0 4px 4px 0;
+            margin-bottom: 20px;
+            font-size: 12.5px;
+            color: #0c4a6e;
+        }
+
+        .section-header {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 4px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-header::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 14px;
+            background-color: #0284c7;
+            border-radius: 2px;
+        }
+
+        .exp-item {
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .exp-role {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .exp-company {
+            color: #0284c7;
+            font-weight: 600;
+        }
+
+        .exp-date {
+            font-size: 11.5px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .exp-desc {
+            font-size: 12px;
+            color: #475569;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        ul.bullets {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 6px;
+        }
+
+        ul.bullets li {
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 3.5px;
+            font-size: 12px;
+            color: #334155;
+            line-height: 1.35;
+        }
+
+        ul.bullets li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0284c7;
+            font-weight: bold;
+        }
+
+        .tech-env {
+            font-size: 11px;
+            background: #f1f5f9 !important;
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #475569;
+            display: inline-block;
+            margin-top: 2px;
+            width: 100%;
+        }
+
+        .tech-env strong {
+            color: #0f172a;
+        }
+
+        .project-card {
+            background: #fafafa !important;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .project-title {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .project-url {
+            color: #0284c7;
+            text-decoration: none;
+            font-size: 11.5px;
+            font-weight: 500;
+        }
+
+        /* Specific print styles for PDF export */
+        @media print {
+            body {
+                background-color: transparent !important;
+            }
+
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 260px;
+                background-color: #0f172a !important;
+                z-index: 0;
+            }
+
+            .cv-container {
+                width: 100%;
+                margin: 0;
+                box-shadow: none;
+                position: relative;
+                z-index: 1;
+            }
+
+            .sidebar {
+                background-color: transparent !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cv-container">
+    <!-- Sidebar Left -->
+    <aside class="sidebar">
+        <h1>Florian BERTHOL</h1>
+        <div class="subtitle">Senior PHP / Symfony Developer</div>
+
+        <div class="contact-info">
+            <div class="sidebar-title">Contact</div>
+            <div class="contact-item">📍 Paris Region, France</div>
+            <div class="contact-item">📞 +33 6 73 03 09 15</div>
+            <div class="contact-item">✉ fberthol@gmail.com</div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Skills</div>
+
+            <div class="skill-group">
+                <div class="skill-cat">Languages</div>
+                <div class="skill-list">PHP (8.x, 7.x, 5.x), JavaScript, Shell (bash, zsh, PowerShell), Python, SQL</div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-cat">Frameworks</div>
+                <div class="skill-list">Symfony (2 to 7), AngularJS, Vue.js, Bootstrap</div>
+                <div class="skill-list">jQuery, Zend Framework (1 & 2), FuelPHP</div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-cat">Testing, Quality & Architecture</div>
+                <div class="skill-list">PHPUnit, PHPStan, CS Fixer, Code Reviews, SOLID, Design Patterns, OOP</div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-cat">Databases</div>
+                <div class="skill-list">MySQL, MariaDB, PostgreSQL, SQL Server, Redis</div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-cat">Servers & Infrastructure</div>
+                <div class="skill-list">Nginx, Apache, FrankenPHP, Docker</div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-cat">Tools</div>
+                <div class="skill-list">Git (GitHub, GitLab, Bitbucket), SVN, Jira, Redmine, Copilot, Gemini, Claude</div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-cat">Methodologies & Concepts</div>
+                <div class="skill-list">REST APIs, Automated Testing, Agile, CI/CD</div>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Education</div>
+            <div style="font-size: 11.5px; margin-bottom: 6px;">
+                <strong style="color: #fff;">BTS IRIS (Associate Degree in CS)</strong> (2004)<br>
+            </div>
+            <div style="font-size: 11.5px;">
+                <strong style="color: #fff;">Baccalaureate STI (Electronics)</strong> (2002)<br>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Languages</div>
+            <div class="skill-list">
+                <ul class="bullets">
+                    <li class="text-light"><strong>French:</strong> Native speaker</li>
+                    <li class="text-light"><strong>English:</strong> Professional working proficiency (reading & writing)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Interests</div>
+            <div class="skill-list">
+                <ul class="bullets">
+                    <li class="text-light">Bass guitarist in a rock band</li>
+                    <li class="text-light">Student ultralight aircraft (microlight) pilot</li>
+                    <li class="text-light">Cooking, Video games</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Right -->
+    <main class="main-content">
+        <div class="profile-summary">
+            Senior PHP / Symfony developer with over 15 years of experience. Specialized in designing
+            REST APIs and robust web applications in close collaboration with business teams, seeking a permanent full-time position.
+        </div>
+
+        <div class="section-header">Work Experience</div>
+
+        <!-- Boursobank -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="exp-role">Senior PHP / Symfony Developer - <span class="exp-company">Boursobank</span></div>
+                <div class="exp-date">September 2023 - October 2025</div>
+            </div>
+            <div class="exp-desc">Continuous enhancement and maintenance of critical APIs and applications:</div>
+            <ul class="bullets">
+                <li><strong>B19 & B20:</strong> Feature development and maintenance of core REST APIs and customer online banking portal.</li>
+                <li><strong>Boursoscan:</strong> Developed the document upload module for contractual supporting documents.</li>
+                <li><strong>Subscription funnels:</strong> Built multi-product subscription flows (checkbooks, debit/credit cards, mortgages, etc.).</li>
+                <li><strong>Olympic Games contest:</strong> Designed and developed the CRM-integrated REST API and frontend interface alongside the marketing team.</li>
+                <li><strong>HR contract generation:</strong> Gathered requirements from HR stakeholders, benchmarked PDF libraries, and engineered an automated contract generation tool.</li>
+                <li><strong>Quality & CI/CD:</strong> Authored unit tests (PHPUnit) and adhered to strict continuous integration pipelines to guarantee secure production releases.</li>
+            </ul>
+            <div class="tech-env"><strong>Technical environment:</strong> PHP 8.2, Symfony 5.4 & 6.4 (project dependent), REST APIs, PHPUnit, React, AngularJS, Docker, CI/CD</div>
+        </div>
+
+        <!-- Orano -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="exp-role">API Developer - <span class="exp-company">Orano</span></div>
+                <div class="exp-date">January 2021 - May 2023</div>
+            </div>
+            <div class="exp-desc">Consulting mission at Orano focused on API Management:</div>
+            <ul class="bullets">
+                <li><strong>API Lifecycle Management:</strong> Administered production APIs and maintained servers in direct collaboration with the Information Security team.</li>
+                <li><strong>Developer Portal:</strong> Deployed and configured a Joomla-based developer portal for API documentation.</li>
+                <li><strong>Tooling & Automation:</strong> Developed PowerShell automation scripts for automated synchronization and deployment of APIs and documentation.</li>
+            </ul>
+            <div class="tech-env"><strong>Technical environment:</strong> Axway API Management, Axway API Portal, PowerShell, Joomla, REST & SOAP APIs</div>
+        </div>
+
+        <!-- Webnet -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="exp-role">PHP / Symfony Developer - <span class="exp-company">Webnet</span></div>
+                <div class="exp-date">February 2016 - October 2019</div>
+            </div>
+            <div class="exp-desc">Client consulting missions for Webnet, including projects in partnership with SensioLabs:</div>
+            <ul class="bullets">
+                <li><strong>Prowebce:</strong> Maintained and evolved middle-office platforms using Agile Scrum. Implemented cross-site authentication (JWT), access rights management, template-based site duplication, and automated unit/functional tests (PHPUnit, Behat).</li>
+                <li><strong>Cardonnel Ingénierie:</strong> Business application for underfloor heating thermal calculations. Developed administration modules, complex data-entry interfaces, calculation engines, and automated PDF quote generation.</li>
+                <li><strong>Lagardère - Le JDD:</strong> Full overhaul of the news website "Le JDD", developing content templates, XML feeds (sitemaps, RSS), user authentication, and custom eZ Publish extensions.</li>
+                <li><strong>Weka:</strong> Tailor-made professional social network featuring internal messaging, notifications, premium subscriptions, and administrative back-office.</li>
+                <li><strong>Maisons du Monde:</strong> Application maintenance and feature delivery for the e-commerce platform using Kanban methodology.</li>
+            </ul>
+            <div class="tech-env"><strong>Technical environment:</strong> Symfony 2.8 to 3.4, PHP 7, PHPUnit, Behat, MySQL, PostgreSQL, AngularJS, Docker, Git</div>
+        </div>
+
+        <!-- Économie d'énergie -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="exp-role">PHP / Drupal Developer - <span class="exp-company">Économie d'Énergie</span></div>
+                <div class="exp-date">September 2011 - December 2014</div>
+            </div>
+            <div class="exp-desc">Development of corporate and client web platforms in collaboration with sales and marketing teams:</div>
+            <ul class="bullets">
+                <li><strong>Web Development:</strong> Built and maintained institutional and campaign websites (economiedenergie.com, economiedenergie.fr, save-a-tonne.org, syndic.afcee.fr, devenir-ecoartisan.fr, blueplanetchallenge.com).</li>
+                <li><strong>Internal Tools:</strong> Built custom internal business tools tailored to operational team workflows.</li>
+                <li><strong>Data Feeds:</strong> Automated processing and ingestion of XML and CSV data feeds.</li>
+                <li><strong>Quality & Knowledge Base:</strong> Implemented internal documentation wiki and automated verification of skills assessment tests.</li>
+            </ul>
+            <div class="tech-env"><strong>Technical environment:</strong> PHP 5, MySQL, Drupal 7, Symfony 2, Apache</div>
+        </div>
+
+        <!-- Espacemax -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="exp-role">PHP Developer - <span class="exp-company">Espacemax</span></div>
+                <div class="exp-date">December 2008 - April 2011</div>
+            </div>
+            <div class="exp-desc">Development and bug fixing for the e-commerce back-office and administration platform:</div>
+            <ul class="bullets">
+                <li><strong>Logistics Data Feeds:</strong> Automated processing and error correction of warehouse and logistics data streams.</li>
+                <li><strong>Optimization:</strong> Developed and optimized high-throughput PHP scripts and SQL queries.</li>
+                <li><strong>Web Applications:</strong> Built public web and internal intranet applications on a proprietary MVC framework.</li>
+            </ul>
+            <div class="tech-env"><strong>Technical environment:</strong> PHP 5, MySQL, Linux, Proprietary MVC framework</div>
+        </div>
+
+        <div class="section-header">Personal Projects</div>
+
+        <div class="project-card">
+            <div class="project-title">
+                <span>Live Community Platform</span>
+                <a href="https://blague-drole.net/" target="_blank" class="project-url">blague-drole.net ↗</a>
+            </div>
+            <div class="exp-desc" style="margin-top: 4px;">Architecture, development, and system administration of a production website live since 2011:</div>
+            <ul class="bullets" style="margin-top: 6px;">
+                <li><strong>Modernization & Performance:</strong> Complete rewrite of the legacy application to PHP 8.5 / Symfony 7.4 following SOLID principles. Refactored features and optimized backend response times.</li>
+                <li><strong>Caching & Search:</strong> Integrated Redis for data and session caching, and developed a fast full-text search engine powered by RedisSearch.</li>
+                <li><strong>Asynchronous Processing:</strong> Implemented Symfony Messenger with Redis transport for background job processing (cache invalidation, thumbnail generation, etc.).</li>
+                <li><strong>Frontend:</strong> Migrated dynamic UI components from jQuery to Vue.js 3 using Symfony UX.</li>
+                <li><strong>DevOps & Infrastructure:</strong> Containerized the application with Docker, managed Linux (Debian) VPS hosting, and deployed with FrankenPHP.</li>
+                <li><strong>Quality & Testing:</strong> Authored unit and functional tests with PHPUnit to safeguard new features and prevent regressions.</li>
+                <li><strong>Technical SEO:</strong> Enhanced semantic markup, implemented JSON-LD structured data, and optimized Core Web Vitals.</li>
+                <li><strong>AI-Assisted Development:</strong> Leveraged GitHub Copilot and Gemini for code review, test case generation, and accelerated delivery.</li>
+            </ul>
+            <div class="tech-env"><strong>Technical environment:</strong> PHP 8.5, Symfony 7.4, Twig, Vue.js 3, Symfony UX, Redis, RedisSearch, MariaDB 12, Docker, FrankenPHP, Linux/Debian, PHPUnit, GitHub Copilot, Gemini</div>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
